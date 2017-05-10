@@ -1,7 +1,9 @@
+#Let us call the library functions which are most needed for this data challenge
 library(ggplot2)
 library(plyr)
 
 rm(list = ls())
+#Let's set the correct cowkring directory
 setwd("C:/Users/vj853t/Documents/DataScience/Case Study/Case Study 6")
 
 #Read the CSV file and assign it to a variable
