@@ -1,3 +1,6 @@
+This case study is from a series of workshops/case studies conducted by SuperDataScience website
+
+
 Disclaimer: SuperDataScience has no affiliation with the Titanic or Kaggle. The scenario is
 made up for educational purposes.
 You are a Data Analyst working for White Star Line (the owners of RMS Titanic). The
