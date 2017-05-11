@@ -3,7 +3,7 @@ library(ggplot2)
 library(plyr)
 
 rm(list = ls())
-#Let's set the correct cowkring directory
+#Let's set the correct working directory
 setwd("C:/Users/venkatajanga/Documents/DataScience/Case Study/Case Study 2")
 #Reading the data set
 crime_data <- read.csv("~/DataScience/Case Study/Case Study 2/CrimeData2.csv")
