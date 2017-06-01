@@ -12,6 +12,12 @@ wiki_data <- read.csv("~/DataScience/Case Study/Case Study 9/wikipedia_data_full
 #Let's check the structure of the dataset
 str(wiki_data)
 
+#3. Complete the following data cleaning steps
+#a. Name the columns as follows "source", "page_name", "views", "size"
+#b. Format the variables
+#c. Remove duplicate rows
+#d. Remove rows with NA in column “views”
+#e. Add a column called “language” (see hints page for details)
 #Let us filter all the duplicate data
 wiki_data <- unique(wiki_data)
 
