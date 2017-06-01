@@ -1,10 +1,14 @@
+#Let us call the library functions which are most needed for this data challenge
 library(plyr)
 library(ggplot2)
 
 rm(list = ls())
+#Let's set the correct working directory
 setwd("C:/Users/vj853t/Documents/DataScience/Case Study/Case Study 9")
-wiki_data <- read.csv("~/DataScience/Case Study/Case Study 9/wikipedia_data_full.csv")
 
+#1.If you completed question 1 go to question 3, otherwise load the file wikipedia_data_full.csv
+#Read the CSV file and assign it to a variable
+wiki_data <- read.csv("~/DataScience/Case Study/Case Study 9/wikipedia_data_full.csv")
 #Let's check the structure of the dataset
 str(wiki_data)
 
