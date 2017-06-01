@@ -32,6 +32,7 @@ wiki_data$page_name <- as.character(wiki_data$page_name)
 #Let's check the structure of the dataset
 str(wiki_data)
 
+#4. Which language has the largest number of view? (please create a histogram of the top 10 languages)
 wiki_data$language <- gsub("_.+", "", wiki_data$source)
 
 view_count <- aggregate(list(views = wiki_data$views), list(language = wiki_data$language), FUN = sum)
