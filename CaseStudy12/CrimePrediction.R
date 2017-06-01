@@ -1,13 +1,17 @@
+##Let us call the library functions which are most needed for this data challenge
 library(plyr)
 library(ggplot2)
 library(caTools)
 
 rm(list = ls())
+#Let's set the correct working directory
 setwd("C:/Users/vj853t/Documents/DataScience/Case Study/Case Study 12")
 
+#Let us assign the dataset to variables
 var_name <- read.csv("~/DataScience/Case Study/Case Study 12/variable_names.csv", header = FALSE)
 data <- read.csv("~/DataScience/Case Study/Case Study 12/data.csv", header = FALSE)
 
+#Check the structure of each dataset
 str(var_name)
 str(data)
 
