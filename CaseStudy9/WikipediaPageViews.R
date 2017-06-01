@@ -23,9 +23,10 @@ wiki_data <- unique(wiki_data)
 
 #Let us remove NAs from the dataset
 wiki_data <- wiki_data[(!is.na(wiki_data$views)),]
-
+#Let us check the column names
 colnames(wiki_data)
 
+#Change the datatype of column names "Source" and "Pagename" to character
 wiki_data$source <- as.character(wiki_data$source)
 wiki_data$page_name <- as.character(wiki_data$page_name)
 
@@ -33,23 +34,23 @@ wiki_data$page_name <- as.character(wiki_data$page_name)
 str(wiki_data)
 
 #3. Which language has the largest number of view? (please create a histogram of the top 10 languages)
+
+#gsub() function replaces all matches of a string, if the parameter is a string vector, returns a string vector 
+#of the same length and with the same attributes (after possible coercion to character).
+#Elements of string vectors which are not substituted will be returned unchanged (including any declared encoding). 
 wiki_data$language <- gsub("_.+", "", wiki_data$source)
-
+#
 view_count <- aggregate(list(views = wiki_data$views), list(language = wiki_data$language), FUN = sum)
-
 view_count = view_count[order(view_count$views, decreasing = TRUE),]
 
 top10_views = head(arrange(view_count,desc(views)), n = 10)
-
 qplot(language, data = top10_views, geom = 'bar', weight = views, fill = 'red')+
   ggtitle('Views by language')+
   xlab('Language')+
   ylab('Number of views')
 
 pageview_count <- aggregate(list(views = wiki_data$views), list(pagename = wiki_data$page_name), FUN = sum)
-
 pageview_count = pageview_count[order(pageview_count$views, decreasing = TRUE),]
-
 qplot(page_name, data = pageview_count, geom = 'line', weight = views, fill = 'red')+
   ggtitle('Views by language')+
   xlab('Language')+
